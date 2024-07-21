@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <WebView
+        android:id="@+id/webViewControl"
+        android:layout_width="409dp"
+        android:layout_height="298dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- First Horizontal Linear Layout -->
+    <LinearLayout
+        android:id="@+id/firstLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webViewControl">
+
+        <Button
+            android:id="@+id/buttonForwardLeft"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Trái / Tiến" />
+
+        <Button
+            android:id="@+id/buttonForward"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Tiến" />
+
+        <Button
+            android:id="@+id/buttonForwardRight"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Phải / Tiến" />
+
+    </LinearLayout>
+
+    <!-- Second Horizontal Linear Layout -->
+    <LinearLayout
+        android:id="@+id/secondLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstLinearLayout">
+
+        <Button
+            android:id="@+id/buttonLeft"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="75dp"
+            android:layout_weight="1"
+            android:text="Trái" />
+
+
+        <Button
+            android:id="@+id/buttonRight"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="75dp"
+            android:layout_weight="1"
+            android:text="Phải" />
+
+    </LinearLayout>
+
+    <!-- Third Horizontal Linear Layout -->
+    <LinearLayout
+        android:id="@+id/thirdLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondLinearLayout">
+
+        <Button
+            android:id="@+id/buttonReverseLeft"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Lùi / Trái" />
+
+        <Button
+            android:id="@+id/buttonReverse"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Lùi" />
+
+
+        <Button
+            android:id="@+id/buttonReverseRight"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Lùi / Phải" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="582dp" />
+
+    <TextView
+        android:id="@+id/tvCelsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0*C"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:id="@+id/tvFahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0*F"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:layout_marginEnd="50dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
